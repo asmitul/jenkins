@@ -25,3 +25,13 @@ docker run \
   --publish 50000:50000 \
   jenkins/jenkins:jdk17 \
   ```
+
+copy the password
+  ```bash
+  docker logs jenkins-docker
+  ```
+
+goto web browser
+  ```bash
+  http://localhost:8080
+  ```
