@@ -12,7 +12,6 @@ docker pull jenkins/jenkins:jdk17
 ```bash
 docker run \
   --name jenkins \
-  --rm \
   --restart=unless-stopped \
   --detach \
   --privileged \
