@@ -13,6 +13,7 @@ docker pull jenkins/jenkins:jdk17
 docker run \
   --name jenkins \
   --rm \
+  --restart=unless-stopped \
   --detach \
   --privileged \
   --network jenkins \
@@ -23,6 +24,6 @@ docker run \
   --publish 2376:2376 \
   --publish 8080:8080 \
   --publish 50000:50000 \
-  docker:dind \
+  jenkins/jenkins:jdk17 \
   --storage-driver overlay2
   ```
