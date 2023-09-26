@@ -148,3 +148,19 @@ fi
 docker container prune -f
 docker image prune -f
 ```
+
+
+```bash
+docker run \
+  --name jenkins-docker \
+  --restart=unless-stopped \
+  --detach \
+  --privileged \
+  --network jenkins \
+  --network-alias docker \
+  --volume $(which docker):/usr/bin/docker \
+  --volume jenkins-data:/var/jenkins_home \
+  --volume /var/run/docker.sock:/var/run/docker.sock \
+  --publish 8080:8080 \
+  jenkins/jenkins:jdk17 
+```
