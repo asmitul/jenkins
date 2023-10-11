@@ -164,3 +164,7 @@ docker run \
   --publish 8080:8080 \
   jenkins/jenkins:jdk17 
 ```
+
+```bash
+chmod 777 /var/run/docker.sock
+```
