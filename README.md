@@ -156,7 +156,6 @@ docker run \
   --restart=unless-stopped \
   --detach \
   --privileged \
-  --network jenkins \
   --network-alias docker \
   --volume $(which docker):/usr/bin/docker \
   --volume jenkins-data:/var/jenkins_home \
